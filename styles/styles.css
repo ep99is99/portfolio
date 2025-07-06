@@ -1,0 +1,208 @@
+@import "animate.css";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  animation: heartbeat 1s infinite, vaihtuvaVari 10s infinite;
+}
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e2e2e2;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+#otsikko {
+  transition: color 1s ease-in-out;
+}
+.nappi {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.projektit {
+  padding: 2rem;
+}
+
+.projekti-kortti {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projekti-kortti h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.nappi:hover {
+  background-color: #005fa3;
+}
+.nappi.sininen {
+  background-color: #005fa3;
+}
+.nappi.punanen {
+  background-color: #cc0000;
+}
+.nappi.keltanen {
+  background-color: #ffcc00;
+}
+.nappi.vihreä {
+  background-color: #00cc00;
+}
+form {
+  max-width: 600px;
+  margin: 2rem auto; /* auto = keskitys vaakasuunnassa */
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  label {
+    display: block;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+}
+
+button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding: 2rem;
+}
+main section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  color: #0077cc;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Animaation määrittely */
+@keyframes vaihtuvaVari {
+  0% {
+    color: #e74c3c;
+  } /* punainen */
+  20% {
+    color: #f39c12;
+  } /* oranssi */
+  40% {
+    color: #27ae60;
+  } /* vihreä */
+  60% {
+    color: #2980b9;
+  } /* sininen */
+  80% {
+    color: #8e44ad;
+  } /* violetti */
+  100% {
+    color: #e74c3c;
+  } /* takaisin punaiseen */
+}
+.profiilikuva {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}

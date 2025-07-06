@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ota yhteyttä</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tervetuloa Portfoliooni</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nappi vihreä">Etusivu</a></li>
+          <li><a href="projektit.html" class="nappi sininen">Projektit</a></li>
+          <li>
+            <a href="tietoja.html" class="nappi punanen">Tietoa minusta</a>
+          </li>
+          <li>
+            <a href="yhteyttä.html" class="nappi keltanen">Ota yhteyttä</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <script>
+        const url = new URL(window.location.href);
+        if (url.searchParams.get("onnistui") === "1") {
+          const nimi = url.searchParams.get("nimi") || "kävijä";
+          document.write(
+            `<p style="color: green;">Kiitos viestistä, ${nimi}! Otan yhteyttä mahdollisimman pian.</p>`
+          );
+        }
+      </script>
+
+      <form method="post" action="yhteys.php">
+        <label for="nimi">Nimi:</label><br />
+        <input type="text" id="nimi" name="nimi" required /><br /><br />
+
+        <label for="sahkoposti">Sähköposti:</label><br />
+        <input
+          type="email"
+          id="sahkoposti"
+          name="sahkoposti"
+          required
+        /><br /><br />
+
+        <label for="viesti">Viesti:</label><br />
+        <textarea
+          id="viesti"
+          name="viesti"
+          rows="5"
+          required
+          minlength="1"
+          maxlength="1000"
+          size="15"
+        ></textarea
+        ><br /><br />
+
+        <button type="submit" class="nappi vihreä">Lähetä</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Esapekka. Kaikki oikeudet pidätetään.</p>
+    </footer>
+  </body>
+</html>
